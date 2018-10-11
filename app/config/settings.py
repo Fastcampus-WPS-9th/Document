@@ -29,6 +29,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'abstract_base_classes',
     'fields',
     'foreignkey',
     'many_to_many',

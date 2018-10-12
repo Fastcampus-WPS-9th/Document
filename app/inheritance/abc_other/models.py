@@ -1,4 +1,4 @@
-from abstract_base_classes.models import (
+from inheritance.abstract_base_classes.models import (
     PostBase,
 )
 

@@ -5,7 +5,7 @@ class Place1(models.Model):
     # 암시적으로 생성되는 PK field
     #  id = models.AutoField(primary_key=True)
     #  -> 임의의 필드에 primary_key=True옵션을 주면 id필드가 생성되지 않음
-    name = models.CharField(max_length=50)
+    name = models.CharField(max_length=30)
     address = models.CharField(max_length=80, blank=True)
 
     def __str__(self):
@@ -35,6 +35,7 @@ class Restaurant1(Place1):
         primary_key=True,
         on_delete=models.CASCADE,
     )
+    name2 = models.CharField(max_length=30, db_column='name', blank=True)
     serves_hot_dogs = models.BooleanField(default=False)
     serves_pizza = models.BooleanField(default=False)
 

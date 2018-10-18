@@ -10,11 +10,17 @@ class Blog(models.Model):
 
 
 class Author(models.Model):
-    name = models.CharField(max_length=200)
+    name = models.CharField(
+        max_length=200,
+        blank=True,
+        null=True,
+    )
     email = models.EmailField(blank=True)
 
     def __str__(self):
-        return self.name
+        if self.name:
+            return self.name
+        return 'name null'
 
 
 class Entry(models.Model):

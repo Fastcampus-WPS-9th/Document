@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'relation.many_to_many',
     'relation.one_to_one',
 
+    'weblog',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
